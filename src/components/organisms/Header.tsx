@@ -12,7 +12,6 @@ export const Header: FC = () => {
 }
 
 const StyeldHeader = styled.header`
-  color: ${props => props.theme.secondary};
   background: ${props => props.theme.main};
   width: 100%;
   height: 40px;
