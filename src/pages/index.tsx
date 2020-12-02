@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
+import { Header } from '../components/organisms'
 
 const Index: FC = () => {
   return (
     <>
-      <p>hello Vercel</p>
+      <Header></Header>
     </>
   )
 }
