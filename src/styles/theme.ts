@@ -1,11 +1,14 @@
 export const lightTheme = {
-  main: '#2e3131',
-  secondary: '#fff',
-  text: '#262626'
-} as const
+  header: 'transparent',
+  headerContents: '#262626'
+}
 
 export const darkTheme = {
-  main: '#2e3131',
-  secondary: '#f7f7f7',
-  text: '#f7f7f7'
-} as const
+  header: '#262626',
+  headerContents: '#f7f7f7'
+}
+
+export type ThemeType = {
+  header: string
+  headerContents: string
+}

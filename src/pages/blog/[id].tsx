@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
+import { Header } from '../../components/organisms'
 
 const Blog: FC = () => {
   return (
     <>
-      <p>this is blog</p>
+      <Header></Header>
     </>
   )
 }
