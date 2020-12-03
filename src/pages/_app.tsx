@@ -3,8 +3,10 @@ import React, { createContext, useReducer, Dispatch } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme, ThemeType } from '../styles'
 
-const switchThemeReducer = (currentTheme: ThemeType, action: 'LIGHT' | 'DARK') => {
-  switch (action) {
+type Action = { type: 'LIGHT' } | { type: 'DARK' }
+
+const switchThemeReducer = (currentTheme: ThemeType, action: Action) => {
+  switch (action.type) {
     case 'LIGHT':
       return lightTheme
     case 'DARK':
@@ -17,7 +19,7 @@ const switchThemeReducer = (currentTheme: ThemeType, action: 'LIGHT' | 'DARK') =
 export const ThemeContext = createContext(
   {} as {
     currentTheme: ThemeType
-    dispatch: Dispatch<'LIGHT' | 'DARK'>
+    dispatch: Dispatch<Action>
   }
 )
 
