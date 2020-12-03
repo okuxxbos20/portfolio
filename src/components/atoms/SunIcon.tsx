@@ -1,6 +1,9 @@
 import React, { FC } from 'react'
 
-export const SunIcon: FC<{ size?: string; color?: string }> = ({ size, color }) => {
+export const SunIcon: FC<{ size?: string; color?: string }> = ({
+  size = '25px',
+  color = '#262626'
+}) => {
   return (
     <>
       <svg
