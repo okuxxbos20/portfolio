@@ -7,16 +7,6 @@ import { ThemeContext } from '../../pages/_app'
 
 export const Header: FC = () => {
   const { currentTheme, dispatch } = useContext(ThemeContext)
-
-  const switchThemeType = (): void => {
-    if (currentTheme === lightTheme) {
-      dispatch({ type: 'LIGHT' })
-      console.log('yooooo')
-    } else {
-      dispatch({ type: 'DARK' })
-      console.log('hiiiiii')
-    }
-  }
   return (
     <>
       <StyeldHeader>
@@ -24,13 +14,15 @@ export const Header: FC = () => {
           <Title>o_ku</Title>
         </Link>
         <RightSide>
-          <ThemeIcon onClick={() => switchThemeType()}>
-            {currentTheme === lightTheme ? (
-              <SunIcon size="25px" color="#f7ca18" />
-            ) : (
-              <MoonIcon size="25px" color="#f7ca18" />
-            )}
-          </ThemeIcon>
+          {currentTheme === lightTheme ? (
+            <ThemeIcon onClick={() => dispatch({ type: 'DARK' })}>
+              <SunIcon />
+            </ThemeIcon>
+          ) : (
+            <ThemeIcon onClick={() => dispatch({ type: 'LIGHT' })}>
+              <MoonIcon />
+            </ThemeIcon>
+          )}
         </RightSide>
       </StyeldHeader>
     </>
@@ -39,7 +31,7 @@ export const Header: FC = () => {
 
 const StyeldHeader = styled.header`
   background: ${props => props.theme.header};
-  width: 100%;
+  width: calc(100% - 20px);
   height: 40px;
   padding: 0 10px;
   display: flex;
@@ -71,7 +63,7 @@ const ThemeIcon = styled.button`
   transition: 200ms;
   &:hover {
     cursor: pointer;
-    background: ${props => props.theme.headerContents};
+    transform: scale(1.1);
   }
   &:focus {
     outline: none;
