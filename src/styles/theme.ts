@@ -4,7 +4,7 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
-  header: '#262626',
+  header: '#303030',
   headerContents: '#f7f7f7'
 }
 
