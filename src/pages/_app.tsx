@@ -1,3 +1,4 @@
+import '../styles/font.setting.css'
 import { AppProps } from 'next/app'
 import React, { createContext, useReducer, Dispatch } from 'react'
 import { ThemeProvider } from 'styled-components'

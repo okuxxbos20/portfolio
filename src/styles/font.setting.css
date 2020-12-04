@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), url(/fonts/Roboto/Roboto-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans JP'),
+    url(/fonts/Noto_Sans_JP/NotoSansJP-Regular.woff) format('woff');
+}
+
+body {
+  font-family: 'Roboto';
+}
