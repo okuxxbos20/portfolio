@@ -44,15 +44,42 @@ export async function getStaticProps({ params }) {
 export default Blog
 
 const BlogHeader = styled.div`
-  /* background: #ddd; */
-  width: calc(100% - 60px);
-  padding: 15px 30px 20px;
+  width: calc(100% - 40px);
+  padding: 15px 20px 20px;
+  margin-bottom: 30px;
   border-bottom: 1px solid ${props => props.theme.border};
 `
 
 const BlogBody = styled.div`
-  /* background: #ddd; */
-  width: calc(100% - 60px);
-  padding: 15px 30px 20px;
+  width: calc(100% - 40px);
+  padding: 15px 20px 20px;
   border-bottom: 1px solid ${props => props.theme.border};
+  h1 {
+    margin-bottom: 30px;
+  }
+  p {
+    color: ${props => props.theme.text};
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  li {
+    margin-left: 20px;
+  }
+  pre {
+    width: calc(100% - 40px);
+    background: ${props => props.theme.codeBg};
+    padding: 20px;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    code {
+      font-family: Source Code Pro;
+      color: ${props => props.theme.codeColor};
+    }
+  }
 `

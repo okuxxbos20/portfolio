@@ -1,12 +1,14 @@
 import React, { FC } from 'react'
-import { Header, Main } from '../components/organisms'
+import { Header, Main, Container } from '../components/organisms'
 
 const Index: FC = () => {
   return (
     <>
       <Header />
       <Main>
-        <p>this is index</p>
+        <Container>
+          <p>this is index</p>
+        </Container>
       </Main>
     </>
   )

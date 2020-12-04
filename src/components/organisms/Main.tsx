@@ -8,7 +8,7 @@ export const Main: FC<{ children: ReactNode }> = ({ children }) => {
 const StyledMain = styled.div`
   width: 100%;
   // temporary
-  height: 100vh;
+  min-height: calc(100vh - 140px);
   color: ${props => props.theme.text};
   background: ${props => props.theme.bg};
   padding: 50px 0;
