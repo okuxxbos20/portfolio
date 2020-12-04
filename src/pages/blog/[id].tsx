@@ -15,6 +15,9 @@ const Blog: FC<{ blogData }> = ({ blogData }) => {
             <p>{blogData.id}</p>
             <p>{blogData.date}</p>
           </BlogHeader>
+          <BlogBody>
+            <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
+          </BlogBody>
         </Container>
       </Main>
     </>
@@ -30,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const blogData = getPostData(params.id)
+  const blogData = await getPostData(params.id)
   return {
     props: {
       blogData
@@ -41,6 +44,13 @@ export async function getStaticProps({ params }) {
 export default Blog
 
 const BlogHeader = styled.div`
+  /* background: #ddd; */
+  width: calc(100% - 60px);
+  padding: 15px 30px 20px;
+  border-bottom: 1px solid ${props => props.theme.border};
+`
+
+const BlogBody = styled.div`
   /* background: #ddd; */
   width: calc(100% - 60px);
   padding: 15px 30px 20px;
