@@ -25,4 +25,11 @@ export const darkTheme = {
 export type ThemeType = {
   header: string
   headerContents: string
+  bg: string
+  text: string
+  border: string
+  highlight: string
+  codeColor: string
+  codeBg: string
+  tagBg: string
 }
