@@ -6,7 +6,8 @@ export const lightTheme = {
   border: '#ccc',
   highlight: '#26a65b',
   codeColor: '#eee',
-  codeBg: '#272c34'
+  codeBg: '#272c34',
+  tagBg: '#e8ecf1'
 }
 
 export const darkTheme = {
@@ -17,7 +18,8 @@ export const darkTheme = {
   border: '#555',
   highlight: '#26a65b',
   codeColor: '#eee',
-  codeBg: '#2e3131'
+  codeBg: '#2e3131',
+  tagBg: '#2e3131'
 }
 
 export type ThemeType = {

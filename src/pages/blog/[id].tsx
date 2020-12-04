@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import Image from 'next/image'
 import { Header, Main, Container } from '../../components/organisms'
 import { getAllPostIds, getPostData } from '../../lib/blog'
 import styled from 'styled-components'
@@ -11,9 +12,25 @@ const Blog: FC<{ blogData }> = ({ blogData }) => {
       <Main>
         <Container>
           <BlogHeader>
+            {blogData.thumbnail && (
+              <Image
+                src={blogData.thumbnail}
+                alt="thumbnail"
+                layout="responsive"
+                width={15}
+                height={9}
+                quality={100}
+              />
+            )}
             <h1>{blogData.title}</h1>
-            <p>{blogData.id}</p>
-            <p>{blogData.date}</p>
+            {blogData.tags && (
+              <TagBox>
+                {blogData.tags.map((tag: string) => {
+                  return <Tag key={tag}>{tag}</Tag>
+                })}
+              </TagBox>
+            )}
+            <h4>{blogData.date}</h4>
           </BlogHeader>
           <BlogBody>
             <div dangerouslySetInnerHTML={{ __html: blogData.contentHtml }} />
@@ -48,6 +65,27 @@ const BlogHeader = styled.div`
   padding: 15px 20px 20px;
   margin-bottom: 30px;
   border-bottom: 1px solid ${props => props.theme.border};
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin: 10px 0;
+  }
+`
+
+const TagBox = styled.ul`
+  float: left;
+  margin-bottom: 10px;
+`
+
+const Tag = styled.li`
+  list-style: none;
+  color: ${params => params.theme.highlight};
+  background: ${params => params.theme.tagBg};
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  float: left;
+  margin: 0 8px 0 0;
 `
 
 const BlogBody = styled.div`
