@@ -15,6 +15,15 @@
     url(/fonts/Noto_Sans_JP/NotoSansJP-Regular.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Source Code Pro'),
+    url(/fonts/Source_Code_Pro/SourceCodePro-Regular.woff) format('woff');
+}
+
 body {
   font-family: 'Roboto';
 }
