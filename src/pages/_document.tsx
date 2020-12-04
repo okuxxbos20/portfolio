@@ -11,7 +11,6 @@ export default class MyDocument extends Document {
             * {
               padding: 0;
               margin: 0;
-            }
           `}</style>
         </Head>
         <body>

@@ -14,6 +14,9 @@ export const Header: FC = () => {
           <Title>o_ku</Title>
         </Link>
         <RightSide>
+          <Link href="/blog">
+            <RightItem link="/blog" label="blog" />
+          </Link>
           {currentTheme === lightTheme ? (
             <ThemeIcon onClick={() => dispatch({ type: 'DARK' })}>
               <SunIcon />
@@ -26,6 +29,14 @@ export const Header: FC = () => {
         </RightSide>
       </StyeldHeader>
     </>
+  )
+}
+
+const RightItem: FC<{ link: string; label: string }> = ({ link, label }) => {
+  return (
+    <Link href={link}>
+      <Item>{label}</Item>
+    </Link>
   )
 }
 
@@ -47,11 +58,23 @@ const Title = styled.p`
 `
 
 const RightSide = styled.div`
+  color: ${props => props.theme.headerContents};
   width: auto;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+`
+
+const Item = styled.p`
+  color: ${props => props.theme.headerContents};
+  line-height: 30px;
+  transition: 200ms;
+  margin-right: 10px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `
 
 const ThemeIcon = styled.button`

@@ -1,15 +1,15 @@
 import React, { FC } from 'react'
 import { Header, Main } from '../../components/organisms'
 
-const Blog: FC = () => {
+const BlogIndex: FC = () => {
   return (
     <>
       <Header />
       <Main>
-        <p>this is blog</p>
+        <p>this is blog index</p>
       </Main>
     </>
   )
 }
 
-export default Blog
+export default BlogIndex

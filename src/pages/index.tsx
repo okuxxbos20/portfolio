@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
-import { Header } from '../components/organisms'
+import { Header, Main } from '../components/organisms'
 
 const Index: FC = () => {
   return (
     <>
-      <Header></Header>
+      <Header />
+      <Main>
+        <p>this is index</p>
+      </Main>
     </>
   )
 }
