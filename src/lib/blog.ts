@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import remark from 'remark'
-import html from 'remark-html'
+// import remark from 'remark'
+// import html from 'remark-html'
 
 const postsDirectory = path.join(process.cwd(), 'public/blogs')
 
@@ -25,14 +25,15 @@ export function getSortedPostsData() {
     return { id, ...matterResult.data }
   })
 
+  return allPostsData
   // Sort posts by date
-  return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
-  })
+  // return allPostsData.sort((a, b) => {
+  //   if (a.date < b.date) {
+  //     return 1
+  //   } else {
+  //     return -1
+  //   }
+  // })
 }
 
 // get all blog's filenames
