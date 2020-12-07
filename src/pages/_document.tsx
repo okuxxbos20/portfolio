@@ -7,6 +7,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <title>o_ku</title>
+          <link rel="icon" href="/favicon.ico" />
           <style>{`
             * {
               padding: 0;

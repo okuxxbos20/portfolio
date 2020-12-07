@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React, { FC } from 'react'
 import Image from 'next/image'
 import { Header, Main, Container } from '../../components/organisms'
@@ -8,6 +9,9 @@ const Blog: FC<{ blogData }> = ({ blogData }) => {
   console.log(blogData)
   return (
     <>
+      <Head>
+        <title>{blogData.title}</title>
+      </Head>
       <Header />
       <Main>
         <Container>
