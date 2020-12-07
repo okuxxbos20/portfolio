@@ -18,7 +18,7 @@ In hac habitasse platea dictumst.
 
 Donec commodo dui ac urna maximus, at eleifend tellus ornare. Vivamus sollicitudin fringilla nunc id mattis. Vestibulum erat nunc, dignissim vel vestibulum id, commodo sit amet ante. Integer volutpat ullamcorper augue bibendum hendrerit. Fusce massa nunc, ultricies non sem ac, tincidunt aliquet erat. Cras id scelerisque nibh. Praesent interdum ullamcorper accumsan. Ut sollicitudin tristique tortor nec gravida. Mauris scelerisque gravida tristique. Vivamus et convallis dui. Nulla rhoncus neque a ligula porttitor varius.
 
-```typescript
+```jsx
 const BlogIndex: FC<{ allPostsData }> = ({ allPostsData }) => {
   console.log(allPostsData)
   return (
