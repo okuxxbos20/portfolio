@@ -4,7 +4,7 @@ export const lightTheme = {
   bg: '#f7f7f7',
   text: '#262626',
   border: '#ccc',
-  highlight: '#26a65b',
+  highlight: '#42b983',
   codeColor: '#eee',
   codeBg: '#272c34',
   tagBg: '#e8ecf1'
@@ -16,7 +16,7 @@ export const darkTheme = {
   bg: '#202020',
   text: '#eee',
   border: '#555',
-  highlight: '#26a65b',
+  highlight: '#42b983',
   codeColor: '#eee',
   codeBg: '#2e3131',
   tagBg: '#2e3131'
