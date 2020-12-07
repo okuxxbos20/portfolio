@@ -8,7 +8,7 @@ export const lightTheme = {
   codeColor: '#eee',
   codeBg: '#272c34',
   tagBg: '#e8ecf1'
-}
+} as const
 
 export const darkTheme = {
   header: '#303030',
@@ -20,16 +20,6 @@ export const darkTheme = {
   codeColor: '#eee',
   codeBg: '#2e3131',
   tagBg: '#2e3131'
-}
+} as const
 
-export type ThemeType = {
-  header: string
-  headerContents: string
-  bg: string
-  text: string
-  border: string
-  highlight: string
-  codeColor: string
-  codeBg: string
-  tagBg: string
-}
+export type ThemeType = typeof lightTheme | typeof darkTheme
