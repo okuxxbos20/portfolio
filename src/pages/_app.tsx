@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import React, { createContext, useReducer, Dispatch } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme, ThemeType } from '../styles'
+import 'highlight.js/styles/nord.css'
 
 type Action = { type: 'LIGHT' } | { type: 'DARK' }
 

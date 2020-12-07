@@ -105,9 +105,6 @@ const BlogBody = styled.div`
     margin-left: 20px;
   }
   pre {
-    width: calc(100% - 40px);
-    background: ${props => props.theme.codeBg};
-    padding: 20px;
     overflow-x: scroll;
     margin-bottom: 30px;
     -ms-overflow-style: none;
